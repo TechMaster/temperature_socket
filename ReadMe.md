@@ -26,3 +26,10 @@ Phía front end, /views/index.html sẽ nhận message temp_change cập nhật 
   });
 </script>
 ```
+# Chạy thử
+```bash
+git clone https://github.com/TechMaster/temperature_socket.git
+cd temperature_socket
+npm install
+npm start
+```
