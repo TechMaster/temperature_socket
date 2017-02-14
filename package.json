@@ -1,0 +1,23 @@
+{
+  "name": "tempsocket",
+  "version": "1.0.0",
+  "description": "Temperature Socket Server",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "mocha -S"
+  },
+  "keywords": [
+    "Socket.io",
+    "Event",
+    "Emitter"
+  ],
+  "author": "Trịnh Minh Cường",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.14.1",
+    "numeral": "^2.0.4",
+    "nunjucks": "^3.0.0",
+    "socket.io": "^1.7.2"
+  }
+}

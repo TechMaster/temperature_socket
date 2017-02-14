@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Temperature Display</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+<h1>Ứng dụng đo nhiệt độ từ xa và hiển thị</h1>
+<h1 id="temp_display"></h1>
+<script>
+  var socket = io('http://localhost:8080');
+  socket.on('temp_change', (data) => {
+    $('#temp_display').text(data.temp);
+  });
+</script>
+</body>
+</html>
