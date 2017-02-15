@@ -19,10 +19,14 @@ io.on('connection', (socket) => {
 
 Phía front end, /views/index.html sẽ nhận message temp_change cập nhật vào
 ```html
-<h1 id="temp_display"></h1>
 <script>
   var socket = io('http://localhost:8080');
+  /* Arrow function chỉ chạy trên Chrome. Với Safari hãy viết hàm call back cổ điển
   socket.on('temp_change', (data) => {
+    $('#temp_display').text(data.temp);
+  });
+  */
+  socket.on('temp_change', function(data) {
     $('#temp_display').text(data.temp);
   });
 </script>
