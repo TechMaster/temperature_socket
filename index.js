@@ -3,14 +3,15 @@
  */
 const express = require('express');
 const app = express();
-const server = require('http').createServer(app);
+//http module là module tích hợp sẵn trong Node.js
+//https://nodejs.org/api/http.html
+const server = require('http').createServer(app);  //Tạo ra HTTP server sử dụng Express để xử lý request đến https://nodejs.org/api/http.html#http_http_createserver_requestlistener
 
-const io = require('socket.io')(server);
+const io = require('socket.io')(server);  //Tạo một socket.io server gắn nó vào http server.
 
 
 const temper_event_emitter = require('./temper_event_emitter');
 const numeral = require('numeral');
-
 
 
 const nunjucks = require('nunjucks');

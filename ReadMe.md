@@ -5,6 +5,7 @@ temper_event_emitter.js
 
 Socket.io được dùng cùng với Express. Mỗi khi nhận được event nhiệt độ thay đổi, thì Socket.io lại emit
 message temp_change
+![diagram](diagram.jpg)
 
 ```javascript
 io.on('connection', (socket) => {
